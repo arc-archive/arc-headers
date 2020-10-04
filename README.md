@@ -6,8 +6,6 @@ A module that contains UI and logic for handle HTTP headers in an HTTP request a
 
 [![Build Status](https://travis-ci.com/advanced-rest-client/arc-headers.svg)](https://travis-ci.com/advanced-rest-client/arc-headers)
 
-> Work in progress
-
 ## Usage
 
 ### Installation
@@ -46,6 +44,19 @@ If your application uses the headers view model (to add support for enable/disab
 produce value when anything after setting up the model change. This is done to minimize number of computations when working with the editor.
 
 The component listens to content type change event (defined in [arc-events](https://github.com/advanced-rest-client/arc-events) as RequestEvents.State.contentTypeChange) and updated the current value when the event is handled.
+
+### HeadersListElement
+
+An list of formatted HTTP headers.
+
+```html
+<headers-list id="list"></headers-list>
+<script>
+{
+  editor.headers = 'content-type: x-test\nLink: <https://api.github.com/organizations/19393150/repos?page=6>, rel="next";';
+}
+</script>
+```
 
 ## Development
 
