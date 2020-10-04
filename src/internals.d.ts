@@ -30,3 +30,8 @@ export declare const cmKeysHandler: unique symbol;
 export declare const cmValueHandler: unique symbol;
 export declare const focusLastName: unique symbol;
 export declare const contentTypeHandler: unique symbol;
+export declare const listValue: unique symbol;
+export declare const headersValue: unique symbol;
+export declare const processHeaders: unique symbol;
+export declare const autoLink: unique symbol;
+export declare const listItemTemplate: unique symbol;

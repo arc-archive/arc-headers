@@ -75,6 +75,7 @@ export class HeadersParser {
         result[result.length] = {
           name: line,
           value: '',
+          enabled: true,
         };
         return;
       }
@@ -83,6 +84,7 @@ export class HeadersParser {
       const obj = {
         name,
         value,
+        enabled: true,
       };
       result.push(obj);
     });

@@ -13,7 +13,7 @@ class ComponentPage extends DemoPage {
       'value',
       'readOnly',
     ]);
-    this.componentName = 'url-input-editor';
+    this.componentName = 'headers-editor';
     this.demoStates = ['Material', 'Outlined', 'Anypoint'];
     this.renderViewControls = true;
     this.compatibility = false;
