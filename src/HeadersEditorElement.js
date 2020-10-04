@@ -352,7 +352,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
    * Adds autocomplete support for the currently focused header.
    * @param {Event} e
    */
-  async [inputFocusHandler](e) {
+  [inputFocusHandler](e) {
     const sc = this[autocompleteRef];
     const node = /** @type AnypointInput */ (e.target);
     if (sc.target === node) {
@@ -494,8 +494,15 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
   [contentActionsTemplate]() {
     return html`
     <div class="content-actions">
-      <anypoint-button @click="${this[copyHandler]}">Copy</anypoint-button>
-      <anypoint-switch .checked="${this.source}" @change="${this[sourceModeHandler]}">Text editor</anypoint-switch>
+      <anypoint-button 
+        class="copy-button"
+        @click="${this[copyHandler]}"
+      >Copy</anypoint-button>
+      <anypoint-switch 
+        .checked="${this.source}" 
+        @change="${this[sourceModeHandler]}"
+        class="editor-switch"
+      >Text editor</anypoint-switch>
     </div>
     `;
   }

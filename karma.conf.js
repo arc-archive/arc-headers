@@ -15,12 +15,17 @@ module.exports = (config) => {
           pattern: config.grep ? config.grep : 'test/**/*.test.js',
           type: 'module'
         },
+        {
+          pattern: 'node_modules/codemirror/lib/codemirror.js',
+          type: 'js'
+        },
       ],
 
       // see the karma-esm docs for all options
       esm: {
         // if you are using 'bare module imports' you will need this option
-        nodeResolve: true
+        nodeResolve: true,
+        coverageExclude: ['src/lib/*.js'],
       },
 
       // coverageIstanbulReporter: {

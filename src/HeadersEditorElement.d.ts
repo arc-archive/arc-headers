@@ -40,6 +40,9 @@ import {
 export declare interface HeadersEditorElement extends EventsTargetMixin, LitElement {
 }
 
+/**
+ * @fires changeDispatches when a value change after the user manipulate the editor value.
+ */
 export declare class HeadersEditorElement {
   static readonly styles: CSSResult;
   
@@ -138,7 +141,7 @@ export declare class HeadersEditorElement {
   /**
    * Adds autocomplete support for the currently focused header.
    */
-  [inputFocusHandler](e: Event): Promise<void>;
+  [inputFocusHandler](e: Event): void;
 
   /**
    * Copies current response text value to clipboard.
