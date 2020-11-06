@@ -12,6 +12,7 @@ class ComponentPage extends DemoPage {
     this.initObservableProperties([
       'value',
       'readOnly',
+      'outlined',
     ]);
     this.componentName = 'headers-editor';
     this.demoStates = ['Material', 'Outlined', 'Anypoint'];
