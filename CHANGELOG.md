@@ -45,3 +45,20 @@
 * adding headers list [9e1f0c5](https://github.com/advanced-rest-client/arc-headers/commit/9e1f0c59fa109f99990f63296450c53ba9484be3) by Pawel
 
 
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/advanced-rest-client/arc-headers/compare/0.1.1...0.1.3) (2020-11-06)
+
+### Build
+
+* bumping version [b4b3f0f](https://github.com/advanced-rest-client/arc-headers/commit/b4b3f0f7980755ac827dbd37c24a7807f7116272) by Pawel
+
+
+### Update
+
+* updating dependencies [ceb4d14](https://github.com/advanced-rest-client/arc-headers/commit/ceb4d1480f530c530dc5c349c777aa9f5d450fa7) by Pawel
+* updating dependencies [27412fa](https://github.com/advanced-rest-client/arc-headers/commit/27412fa06170b3ed596ca1ce8b33570c2c9c9576) by Pawel Psztyc
+* [ci skip] automated merge master->stage. syncing main branches [53272ee](https://github.com/advanced-rest-client/arc-headers/commit/53272eecac9686986b636c3b255190f71bab4d9a) by Ci agent
+* updating ARC events [91b7a8d](https://github.com/advanced-rest-client/arc-headers/commit/91b7a8dfff4d5e5fb8105533f48a71398bf02d7b) by Pawel
+* [ci skip] automated merge master->stage. syncing main branches [155ff03](https://github.com/advanced-rest-client/arc-headers/commit/155ff03446fad810605ec5c3bfeae29d2d72f4e6) by Ci agent
+
+
