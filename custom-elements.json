@@ -1,0 +1,117 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "headers-editor",
+      "path": "./headers-editor.js",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "Headers value.",
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "description": "When enabled it renders source mode (code mirror editor with headers support)",
+          "type": "boolean"
+        },
+        {
+          "name": "readOnly",
+          "description": "When set the editor is in read only mode.",
+          "type": "boolean"
+        },
+        {
+          "name": "compatibility",
+          "description": "Enables compatibility with Anypoint components.",
+          "type": "boolean"
+        },
+        {
+          "name": "outlined",
+          "description": "Enables Material Design outlined style",
+          "type": "boolean"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "CSSResult"
+        },
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "Headers value.",
+          "type": "string"
+        },
+        {
+          "name": "model",
+          "description": "The view model to use to render the values.\nNote, the `model` property is immediately updated when the `value` is set.\nWhen the hosting application uses both values make sure to only set the `model` property.\n\nAlso note, there's no dedicated event for the model change. When value change then\nthe model changed as well.",
+          "type": "FormItem[]"
+        },
+        {
+          "name": "source",
+          "attribute": "source",
+          "description": "When enabled it renders source mode (code mirror editor with headers support)",
+          "type": "boolean"
+        },
+        {
+          "name": "readOnly",
+          "attribute": "readOnly",
+          "description": "When set the editor is in read only mode.",
+          "type": "boolean"
+        },
+        {
+          "name": "compatibility",
+          "attribute": "compatibility",
+          "description": "Enables compatibility with Anypoint components.",
+          "type": "boolean"
+        },
+        {
+          "name": "outlined",
+          "attribute": "outlined",
+          "description": "Enables Material Design outlined style",
+          "type": "boolean"
+        },
+        {
+          "name": "eventsTarget",
+          "description": "By default the element listens on the `window` object. If this value is set,\nthen all events listeners will be attached to this object instead of `window`.",
+          "type": "EventTarget"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "Dispatches when a value change after the user manipulate the editor value."
+        }
+      ]
+    },
+    {
+      "name": "headers-list",
+      "path": "./headers-list.js",
+      "description": "An element that renders a list of headers.",
+      "attributes": [
+        {
+          "name": "headers",
+          "description": "A HTTP headers to render.",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "CSSResult"
+        },
+        {
+          "name": "headers",
+          "attribute": "headers",
+          "description": "A HTTP headers to render.",
+          "type": "string"
+        },
+        {
+          "name": "hasHeaders",
+          "description": "Tests whether there's anything to render.",
+          "type": "boolean"
+        }
+      ]
+    }
+  ]
+}

@@ -519,7 +519,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       ?readonly="${readOnly}"
       lineNumbers
       .value="${this.value}"
-      @input="${this[cmValueHandler]}"
+      @change="${this[cmValueHandler]}"
     ></code-mirror>`;
   }
 

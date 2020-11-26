@@ -37,13 +37,10 @@ import {
   contentTypeHandler,
 } from './internals.js';
 
-export declare interface HeadersEditorElement extends EventsTargetMixin, LitElement {
-}
-
 /**
- * @fires changeDispatches when a value change after the user manipulate the editor value.
+ * @fires change Dispatches when a value change after the user manipulate the editor value.
  */
-export declare class HeadersEditorElement {
+export declare class HeadersEditorElement extends EventsTargetMixin(LitElement) {
   static readonly styles: CSSResult;
   
   /**
