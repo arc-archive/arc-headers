@@ -62,3 +62,24 @@
 * [ci skip] automated merge master->stage. syncing main branches [155ff03](https://github.com/advanced-rest-client/arc-headers/commit/155ff03446fad810605ec5c3bfeae29d2d72f4e6) by Ci agent
 
 
+<a name="0.1.4"></a>
+## [0.1.4](https://github.com/advanced-rest-client/arc-headers/compare/0.1.2...0.1.4) (2020-11-26)
+
+### Build
+
+* bumping version [b4b3f0f](https://github.com/advanced-rest-client/arc-headers/commit/b4b3f0f7980755ac827dbd37c24a7807f7116272) by Pawel
+
+
+### Update
+
+* [ci skip] automated merge master->stage. syncing main branches [fc6c69c](https://github.com/advanced-rest-client/arc-headers/commit/fc6c69c1e1175b66b4a50c91550b5380e7f2cfdf) by Ci agent
+* updating dependencies [ceb4d14](https://github.com/advanced-rest-client/arc-headers/commit/ceb4d1480f530c530dc5c349c777aa9f5d450fa7) by Pawel
+* updating dependencies [27412fa](https://github.com/advanced-rest-client/arc-headers/commit/27412fa06170b3ed596ca1ce8b33570c2c9c9576) by Pawel Psztyc
+* [ci skip] automated merge master->stage. syncing main branches [53272ee](https://github.com/advanced-rest-client/arc-headers/commit/53272eecac9686986b636c3b255190f71bab4d9a) by Ci agent
+
+
+### Bug Fixes
+
+* fixing event handling and types [f475840](https://github.com/advanced-rest-client/arc-headers/commit/f475840b8cda8fccf0dcc9bfb4df135e1c57495c) by Pawel Psztyc
+
+
