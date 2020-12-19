@@ -83,3 +83,22 @@
 * fixing event handling and types [f475840](https://github.com/advanced-rest-client/arc-headers/commit/f475840b8cda8fccf0dcc9bfb4df135e1c57495c) by Pawel Psztyc
 
 
+<a name="0.1.5"></a>
+## [0.1.5](https://github.com/advanced-rest-client/arc-headers/compare/0.1.3...0.1.5) (2020-12-19)
+
+### Update
+
+* [ci skip] automated merge master->stage. syncing main branches [fe4b93b](https://github.com/advanced-rest-client/arc-headers/commit/fe4b93bcc4d7df2c2f0238dcee050fc77f873b8f) by Ci agent
+* [ci skip] automated merge master->stage. syncing main branches [fc6c69c](https://github.com/advanced-rest-client/arc-headers/commit/fc6c69c1e1175b66b4a50c91550b5380e7f2cfdf) by Ci agent
+
+
+### Features
+
+* moving ArcHeaders here from electron request [548f84c](https://github.com/advanced-rest-client/arc-headers/commit/548f84c38ea7f218adf2e5cbea3d24f04a963697) by Pawel Psztyc
+
+
+### Bug Fixes
+
+* fixing event handling and types [f475840](https://github.com/advanced-rest-client/arc-headers/commit/f475840b8cda8fccf0dcc9bfb4df135e1c57495c) by Pawel Psztyc
+
+
