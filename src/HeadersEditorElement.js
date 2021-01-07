@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 /* eslint-disable no-param-reassign */
 /* eslint-disable class-methods-use-this */
 /**
@@ -38,6 +39,7 @@ import {
   valueChangeEventName,
   sourceTemplate,
   formTemplate,
+  formHeaderTemplate,
   addTemplate,
   emptyTemplate,
   contentActionsTemplate,
@@ -62,6 +64,8 @@ import {
   cmValueHandler,
   focusLastName,
   contentTypeHandler,
+  copyActionButtonTemplate,
+  editorSwitchTemplate,
 } from './internals.js';
 import elementStyles from './styles/HeadersEditor.styles.js';
 
@@ -494,16 +498,34 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
   [contentActionsTemplate]() {
     return html`
     <div class="content-actions">
-      <anypoint-button 
-        class="copy-button"
-        @click="${this[copyHandler]}"
-      >Copy</anypoint-button>
-      <anypoint-switch 
-        .checked="${this.source}" 
-        @change="${this[sourceModeHandler]}"
-        class="editor-switch"
-      >Text editor</anypoint-switch>
+      ${this[copyActionButtonTemplate]()}
+      ${this[editorSwitchTemplate]()}
     </div>
+    `;
+  }
+
+  /**
+   * @returns {TemplateResult} The template for the copy action button
+   */
+  [copyActionButtonTemplate]() {
+    return html`
+    <anypoint-button 
+      class="copy-button"
+      @click="${this[copyHandler]}"
+    >Copy</anypoint-button>
+    `;
+  }
+
+  /**
+   * @returns {TemplateResult} The template for the editor type switch
+   */
+  [editorSwitchTemplate]() {
+    return html`
+    <anypoint-switch 
+      .checked="${this.source}" 
+      @change="${this[sourceModeHandler]}"
+      class="editor-switch"
+    >Text editor</anypoint-switch>
     `;
   }
 
@@ -532,15 +554,23 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       return this[emptyTemplate]();
     }
     return html`
-    <div class="table-labels">
-      <span class="param-name-label">Name</span>
-      <span class="param-value-label">Value</span>
-    </div>
+    ${this[formHeaderTemplate]()}
     <div class="params-list">
       ${model.map((item, index) => this[headerItemTemplate](item, index))}
     </div>
     ${this[addTemplate]()}
     `;
+  }
+
+  /**
+   * @returns {TemplateResult} The template for the editor title
+   */
+  [formHeaderTemplate]() {
+    return html`
+    <div class="table-labels">
+      <span class="param-name-label">Name</span>
+      <span class="param-value-label">Value</span>
+    </div>`;
   }
 
   /**

@@ -35,6 +35,8 @@ import {
   cmValueHandler,
   focusLastName,
   contentTypeHandler,
+  copyActionButtonTemplate,
+  editorSwitchTemplate,
 } from './internals.js';
 
 /**
@@ -176,6 +178,16 @@ export declare class HeadersEditorElement extends EventsTargetMixin(LitElement) 
    * @returns a template for the content actions
    */
   [contentActionsTemplate](): TemplateResult;
+
+  /**
+   * @returns The template for the copy action button
+   */
+  [copyActionButtonTemplate](): TemplateResult;
+
+  /**
+   * @returns The template for the editor type switch
+   */
+  [editorSwitchTemplate](): TemplateResult;
 
   /**
    * @returns a template for the content actions
