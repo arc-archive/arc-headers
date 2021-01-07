@@ -142,7 +142,7 @@ export class HeadersParser {
     let result = '';
     if (key && key.trim() !== '') {
       result += `${key}: `;
-      if (value) {
+      if (typeof value !== 'undefined') {
         result += value;
       }
     }
