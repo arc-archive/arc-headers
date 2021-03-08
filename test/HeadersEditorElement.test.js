@@ -476,4 +476,26 @@ accept-encoding: gzip`;
       }
     );
   });
+
+  describe('[copyActionButtonTemplate]()', () => {
+    let element = /** @type HeadersEditorElement */(null);
+    beforeEach(async () => {
+      element = await basicFixture();
+    });
+
+    it('should render copy button disabled when there are no headers', () => {
+      const button = /** @type AnypointButton */ (element.shadowRoot.querySelector('.copy-button'));
+      assert.isTrue(button.disabled);
+    });
+
+    it('should render copy button not disabled when there is at least one header', async () => {
+      const headers = `content-type: x-value
+accept: */*
+accept-encoding: gzip`;
+      element = await valueFixture(headers);
+      await aTimeout(0);
+      const button = /** @type AnypointButton */ (element.shadowRoot.querySelector('.copy-button'));
+      assert.isNotTrue(button.disabled);
+    });
+  })
 });
