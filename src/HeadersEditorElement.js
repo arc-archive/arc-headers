@@ -171,6 +171,10 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
     };
   }
 
+  get hasHeaders() {
+    return Boolean(this.model && this.model.length)
+  }
+
   constructor() {
     super();
     this.outlined = false;
@@ -512,6 +516,8 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
     <anypoint-button 
       class="copy-button"
       @click="${this[copyHandler]}"
+      ?disabled="${!this.hasHeaders}"
+
     >Copy</anypoint-button>
     `;
   }
