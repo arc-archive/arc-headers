@@ -31,6 +31,31 @@ describe('HeadersParser', () => {
       const filtered = HeadersParser.unique(headers);
       assert.deepEqual(filtered, ref);
     });
+
+    it('does not overwrite original inputs when duplicate headers provided', () => {
+      const headers = [
+        {
+          name: 'x-test',
+          value: 'value 1',
+        },
+        {
+          name: 'x-test',
+          value: 'value 2',
+        },
+      ];
+      const expected = [
+        {
+          name: 'x-test',
+          value: 'value 1',
+        },
+        {
+          name: 'x-test',
+          value: 'value 2',
+        },
+      ];
+      HeadersParser.unique(headers);
+      assert.deepEqual(headers, expected);
+    })
   });
 
   describe('toJSON()', () => {
