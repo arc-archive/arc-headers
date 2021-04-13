@@ -130,3 +130,32 @@
 * fixing boolean value handling by the parser [29117ea](https://github.com/advanced-rest-client/arc-headers/commit/29117ea12b829ca363b8d16dfe8500e9c86a255b) by Pawel Psztyc
 
 
+<a name="0.1.9"></a>
+## [0.1.9](https://github.com/advanced-rest-client/arc-headers/compare/0.1.4...0.1.9) (2021-04-13)
+
+### Build
+
+* bumping version [7d6a61e](https://github.com/advanced-rest-client/arc-headers/commit/7d6a61e812e50a6c042284b3f7294f6823e4c6d0) by Pawel Psztyc
+* bumping version [2196ba2](https://github.com/advanced-rest-client/arc-headers/commit/2196ba2a758cab18bed890dcc716bc3b37645db5) by Pawel Psztyc
+
+
+### Update
+
+* [ci skip] automated merge master->stage. syncing main branches [1a7b7ac](https://github.com/advanced-rest-client/arc-headers/commit/1a7b7ac83cc6eab13ccf8f10c6765a472187c0ad) by Ci agent
+* updatinfg dependencies [57ae3e6](https://github.com/advanced-rest-client/arc-headers/commit/57ae3e625ab4c447cdce6e4a9d8cdc41a463b156) by Pawel Psztyc
+* [ci skip] automated merge master->stage. syncing main branches [d64758e](https://github.com/advanced-rest-client/arc-headers/commit/d64758e243686492d22e67d89267f1a27834d99e) by Ci agent
+* [ci skip] automated merge master->stage. syncing main branches [fe4b93b](https://github.com/advanced-rest-client/arc-headers/commit/fe4b93bcc4d7df2c2f0238dcee050fc77f873b8f) by Ci agent
+
+
+### Features
+
+* adding support for optional values [4898dc5](https://github.com/advanced-rest-client/arc-headers/commit/4898dc54d5c14f992dcc31df6772081496077277) by Pawel Psztyc
+* fragmenting templates for extensibility [a9bfef7](https://github.com/advanced-rest-client/arc-headers/commit/a9bfef7ad0237574de3a7504d86917584be78000) by Pawel Psztyc
+* moving ArcHeaders here from electron request [548f84c](https://github.com/advanced-rest-client/arc-headers/commit/548f84c38ea7f218adf2e5cbea3d24f04a963697) by Pawel Psztyc
+
+
+### Bug Fixes
+
+* fixing boolean value handling by the parser [29117ea](https://github.com/advanced-rest-client/arc-headers/commit/29117ea12b829ca363b8d16dfe8500e9c86a255b) by Pawel Psztyc
+
+
