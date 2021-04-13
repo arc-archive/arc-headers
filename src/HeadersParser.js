@@ -22,7 +22,7 @@ export class HeadersParser {
         return;
       }
       if (!(header.name in _tmp)) {
-        _tmp[header.name] = header;
+        _tmp[header.name] = { ...header };
         return;
       }
       if (header.value) {
