@@ -358,4 +358,18 @@ describe('HeadersParser', () => {
       assert.equal(valid, null);
     });
   });
+
+  describe('itemToString()', () => {
+    it('should transform multi-line header value to single-line', () => {
+      const header = {
+          name: 'test-header',
+          value: `line 1
+line 2
+line 3`,
+      };
+      const expected = 'test-header: line 1 line 2 line 3';
+      const result = HeadersParser.itemToString(header);
+      assert.equal(result, expected);
+    });
+  });
 });
