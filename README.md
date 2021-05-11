@@ -4,7 +4,7 @@ A module that contains UI and logic for handle HTTP headers in an HTTP request a
 
 [![Published on NPM](https://img.shields.io/npm/v/@advanced-rest-client/arc-headers.svg)](https://www.npmjs.com/package/@advanced-rest-client/arc-headers)
 
-[![Build Status](https://travis-ci.com/advanced-rest-client/arc-headers.svg)](https://travis-ci.com/advanced-rest-client/arc-headers)
+[![Tests and publishing](https://github.com/advanced-rest-client/arc-headers/actions/workflows/deployment.yml/badge.svg)](https://github.com/advanced-rest-client/arc-headers/actions/workflows/deployment.yml)
 
 ## Usage
 

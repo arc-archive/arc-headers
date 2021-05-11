@@ -143,6 +143,7 @@ export class HeadersParser {
     if (key && key.trim() !== '') {
       result += `${key}: `;
       if (typeof value !== 'undefined') {
+        value = value.split('\n').join(' ');
         result += value;
       }
     }
