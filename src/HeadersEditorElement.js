@@ -19,6 +19,7 @@ import '@anypoint-web-components/anypoint-button/anypoint-icon-button.js';
 import '@anypoint-web-components/anypoint-button/anypoint-button.js';
 import '@anypoint-web-components/anypoint-input/anypoint-input.js';
 import '@anypoint-web-components/anypoint-switch/anypoint-switch.js';
+import '@anypoint-web-components/anypoint-checkbox/anypoint-checkbox.js';
 import '@advanced-rest-client/arc-icons/arc-icon.js';
 import '@anypoint-web-components/anypoint-autocomplete/anypoint-autocomplete.js';
 import '@advanced-rest-client/clipboard-copy/clipboard-copy.js';
@@ -314,7 +315,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
     const node = /** @type HTMLElement */ (e.target);
     const index = Number(node.dataset.index);
     const item = this[viewModel][index];
-    item.enabled = e.detail.value;
+    item.enabled = e.target.checked;
     this[propagateModelChange]();
   }
 
@@ -652,16 +653,16 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
   [headerToggleTemplate](item, index) {
     const { compatibility, readOnly } = this;
     return html`
-    <anypoint-switch
+    <anypoint-checkbox
       data-index="${index}"
       .checked="${item.enabled}"
-      @checked-changed="${this[enabledHandler]}"
+      @change="${this[enabledHandler]}"
       title="Enable / disable header"
       aria-label="Activate to toggle enabled state of this item"
       class="param-switch"
       ?disabled="${readOnly}"
       ?compatibility="${compatibility}"
-    ></anypoint-switch>
+    ></anypoint-checkbox>
     `;
   }
 
