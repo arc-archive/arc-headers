@@ -10,7 +10,6 @@ const hasPartsApi = 'part' in document.createElement('span');
 /** @typedef {import('../index').HeadersEditorElement} HeadersEditorElement */
 /** @typedef {import('@anypoint-web-components/anypoint-input').AnypointInput} AnypointInput */
 /** @typedef {import('@anypoint-web-components/anypoint-switch').AnypointSwitch} AnypointSwitch */
-/** @typedef {import('@anypoint-web-components/anypoint-checkbox').AnypointCheckbox} AnypointCheckbox */
 /** @typedef {import('@anypoint-web-components/anypoint-button').AnypointButton} AnypointButton */
 
 describe('HeadersEditorElement', () => {
@@ -353,19 +352,19 @@ accept-encoding: gzip`;
     beforeEach(async () => { element = await valueFixture(headers) });
 
     it('removes the header from the value', async () => {
-      const button = /** @type AnypointCheckbox */ (element.shadowRoot.querySelector('.param-switch'));
+      const button = /** @type AnypointSwitch */ (element.shadowRoot.querySelector('.param-switch'));
       button.click();
       assert.equal(element.value, 'accept: */*\naccept-encoding: gzip');
     });
 
     it('updates the view model', async () => {
-      const button = /** @type AnypointCheckbox */ (element.shadowRoot.querySelector('.param-switch'));
+      const button = /** @type AnypointSwitch */ (element.shadowRoot.querySelector('.param-switch'));
       button.click();
       assert.isFalse(element.model[0].enabled);
     });
 
     it('dispatches the change event', async () => {
-      const button = /** @type AnypointCheckbox */ (element.shadowRoot.querySelector('.param-switch'));
+      const button = /** @type AnypointSwitch */ (element.shadowRoot.querySelector('.param-switch'));
       const spy = sinon.spy();
       element.addEventListener('change', spy);
       button.click();
