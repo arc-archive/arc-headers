@@ -1,5 +1,8 @@
 import { FormTypes } from '@advanced-rest-client/arc-types';
 
+/**
+ * @deprecated This component is deprecated. Use `@advanced-rest-client/app` instead.
+ */
 export declare class HeadersParser {
   /**
    * Filter array of headers and return not duplicated array of the same headers.

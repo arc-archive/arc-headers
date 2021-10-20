@@ -1,6 +1,7 @@
 /**
  * ARC version of headers interface.
  * It supports ARC API.
+ * @deprecated This component is deprecated. Use `@advanced-rest-client/app` instead.
  */
 export declare class ArcHeaders {
   /**

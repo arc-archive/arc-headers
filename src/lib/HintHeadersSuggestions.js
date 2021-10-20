@@ -122,14 +122,7 @@ export default [{
   }
 }, {
   key: 'Content-Type',
-  values: contentTypes
-  /* ,
-   params: {
-     '*': {
-       type: String,
-       call: 'contentType'
-     }
-   }*/
+  values: contentTypes,
 }, {
   key: 'Cookie',
   values: [

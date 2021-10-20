@@ -1,4 +1,8 @@
-# ARC headers
+# Deprecated
+
+This component is deprecated. Use `@advanced-rest-client/app` instead.
+
+----
 
 A module that contains UI and logic for handle HTTP headers in an HTTP request and request editors.
 

@@ -12,6 +12,7 @@ export const linkRegexp: RegExp;
 
 /**
  * An element that renders a list of headers.
+ * @deprecated This component is deprecated. Use `@advanced-rest-client/app` instead.
  */
 export declare class HeadersListElement extends LitElement {
   static readonly styles: CSSResult;

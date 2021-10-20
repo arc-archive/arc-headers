@@ -41,6 +41,7 @@ import {
 
 /**
  * @fires change Dispatches when a value change after the user manipulate the editor value.
+ * @deprecated This component is deprecated. Use `@advanced-rest-client/app` instead.
  */
 export declare class HeadersEditorElement extends EventsTargetMixin(LitElement) {
   static readonly styles: CSSResult;
