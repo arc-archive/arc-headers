@@ -45,7 +45,7 @@ export class HeadersParser {
     }
     return HeadersParser.headersToJSON(headers);
   }
-  
+
   /**
    * Parse headers string to array of objects.
    * See `#toJSON` for more info.
@@ -185,6 +185,28 @@ export class HeadersParser {
     return parts.join('\n');
   }
 
+  static toStringAsIs(input) {
+    if (typeof input === 'string') {
+      return input;
+    }
+    let headers = input;
+    if (!Array.isArray(headers)) {
+      headers = HeadersParser.toJSON(headers);
+    }
+    if (headers.length === 0) {
+      return '';
+    }
+    headers = HeadersParser.unique(headers);
+    const parts = [];
+    headers.forEach((item) => {
+      if (!item.name && !item.value) {
+        return;
+      }
+      parts.push(HeadersParser.itemToString(item));
+    });
+    return parts.join('\n');
+  }
+
   /**
    * Finds and returns the value of the Content-Type value header.
    *
@@ -254,7 +276,7 @@ export class HeadersParser {
       return headers;
     }
     if (origType === 'string') {
-      return HeadersParser.toString(headers);
+      return HeadersParser.toStringAsIs(headers);
     }
     const obj = {};
     headers.forEach((header) => {
