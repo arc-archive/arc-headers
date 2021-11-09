@@ -258,6 +258,21 @@ describe('HeadersParser', () => {
       const newValue = result[0].value;
       assert.equal(newValue, 'replaced');
     });
+
+    it('should replace header value and not remove empty headers', () => {
+      let headers = 'x-test: value 1, value 2\n';
+      headers += 'content-type: text/html; charset=ISO-8859-4\n';
+      headers += 'x-test-2: v1\n';
+      headers += 'x-test-2: v2\n';
+      headers += 'empty:';
+
+      headers = /** @type string */ (HeadersParser.replace(
+        headers,
+        'content-type',
+        'application/json'
+      ));
+      assert.notEqual(headers.indexOf('empty'), -1);
+    });
   });
 
   describe('getError()', () => {
