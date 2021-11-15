@@ -387,4 +387,66 @@ line 3`,
       assert.equal(result, expected);
     });
   });
+
+  describe('toStringAsIs()', () => {
+    it('Should parse headers array to string', () => {
+      const headers = [
+        {
+          name: 'x-test',
+          value: 'value 1',
+        },
+        {
+          name: 'x-test',
+          value: 'value 2',
+        },
+        {
+          name: 'Content-Type',
+          value: 'application/json',
+        },
+      ];
+      let ref = 'x-test: value 1, value 2\n';
+      ref += 'Content-Type: application/json';
+      const parsed = HeadersParser.toStringAsIs(headers);
+      assert.equal(parsed, ref);
+    });
+
+    it('Should parse Headers object to string', () => {
+      const headers = new Headers();
+      headers.append('x-test', 'value 1');
+      headers.append('x-test', 'value 2');
+      headers.append('Content-Type', 'application/json');
+
+      const parsed = HeadersParser.toStringAsIs(headers);
+      assert.ok(
+        parsed.match(/content-type:\s?application\/json/gim),
+        'Contains content type'
+      );
+      assert.ok(
+        parsed.match(/x-test:\s?value 1,\s?value 2/gim),
+        'Contains concatenated headers'
+      );
+    });
+
+    it('Should parse string to string', () => {
+      let headers = 'x-test: value 1, value 2\n';
+      headers += 'content-type: application/json';
+
+      let ref = 'x-test: value 1, value 2\n';
+      ref += 'content-type: application/json';
+      const parsed = HeadersParser.toStringAsIs(headers);
+      assert.equal(parsed, ref);
+    });
+
+    it('should not parse null headers', () => {
+      const headers = [{ name: 'x-text', value: null }]
+      const parsed = HeadersParser.toStringAsIs(headers);
+      assert.equal(parsed, '');
+    });
+
+    it('should parse empty headers', () => {
+      const headers = [{ name: 'x-text', value: '' }]
+      const parsed = HeadersParser.toStringAsIs(headers);
+      assert.equal(parsed, 'x-text: ');
+    });
+  });
 });

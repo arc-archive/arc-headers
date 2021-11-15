@@ -199,7 +199,7 @@ export class HeadersParser {
     headers = HeadersParser.unique(headers);
     const parts = [];
     headers.forEach((item) => {
-      if (!item.name && !item.value) {
+      if (!item.name && !item.value || item.value === null) {
         return;
       }
       parts.push(HeadersParser.itemToString(item));

@@ -55,6 +55,15 @@ export declare class HeadersParser {
   static toString(input: FormTypes.FormItem[]|String|Headers): string;
 
   /**
+   * Parse headers array to Raw HTTP headers string, without excluding
+   * headers that are not requried and empty.
+   *
+   * @param input List of `Header`s
+   * @return A HTTP representation of the headers.
+   */
+  static toStringAsIs(input: FormTypes.FormItem[]|String|Headers): string;
+
+  /**
    * finds and returns the value of the Content-Type value header.
    *
    * @param input Either HTTP headers string or list of headers.
