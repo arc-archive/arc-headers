@@ -448,5 +448,13 @@ line 3`,
       const parsed = HeadersParser.toStringAsIs(headers);
       assert.equal(parsed, 'x-text: ');
     });
+
+    it('Should parse Headers with number values to string', () => {
+      const headers = new Headers();
+      headers.append('x-test', 0);
+
+      const parsed = HeadersParser.toStringAsIs(headers);
+      assert.ok(parsed.match(/x-test:\s?0/gim));
+    });
   });
 });
