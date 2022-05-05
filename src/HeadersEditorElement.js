@@ -517,7 +517,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       class="copy-button"
       @click="${this[copyHandler]}"
       ?disabled="${!this.hasHeaders}"
-      aria-label="Activate to copy content to clipboard"
+      aria-label="Copy headers"
     >Copy</anypoint-button>
     `;
   }
@@ -531,7 +531,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       .checked="${this.source}" 
       @change="${this[sourceModeHandler]}"
       class="editor-switch"
-      aria-label="Activate to switch between form and raw editor types"
+      aria-label="Toggle editor type"
     >Text editor</anypoint-switch>
     `;
   }
@@ -618,7 +618,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
         class="add-param"
         ?compatibility="${compatibility}"
         ?disabled="${readOnly}"
-        aria-label="Activate to add a new header parameter to this form"
+        aria-label="Add header"
       >
         <arc-icon icon="addCircleOutline"></arc-icon> Add
       </anypoint-button>
@@ -637,7 +637,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       data-index="${index}"
       @click="${this[removeHeaderHandler]}"
       title="Remove this parameter"
-      aria-label="Activate to remove this item"
+      aria-label="Remove"
       ?disabled="${readOnly}"
       ?compatibility="${compatibility}"
     >
@@ -659,7 +659,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       .checked="${item.enabled}"
       @checked-changed="${this[enabledHandler]}"
       title="Enable / disable header"
-      aria-label="Activate to enable/disable this parameter"
+      aria-label="Toggle enabled/disabled"
       class="param-switch"
       ?disabled="${readOnly}"
       ?compatibility="${compatibility}"
