@@ -517,7 +517,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       class="copy-button"
       @click="${this[copyHandler]}"
       ?disabled="${!this.hasHeaders}"
-
+      aria-label="Activate to copy content to clipboard"
     >Copy</anypoint-button>
     `;
   }
@@ -531,6 +531,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       .checked="${this.source}" 
       @change="${this[sourceModeHandler]}"
       class="editor-switch"
+      aria-label="Activate to switch between form and raw editor types"
     >Text editor</anypoint-switch>
     `;
   }
@@ -617,6 +618,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
         class="add-param"
         ?compatibility="${compatibility}"
         ?disabled="${readOnly}"
+        aria-label="Activate to add a new header parameter to this form"
       >
         <arc-icon icon="addCircleOutline"></arc-icon> Add
       </anypoint-button>
