@@ -659,7 +659,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       .checked="${item.enabled}"
       @checked-changed="${this[enabledHandler]}"
       title="Enable / disable header"
-      aria-label="Activate to toggle enabled state of this item"
+      aria-label="Activate to enable/disable this parameter"
       class="param-switch"
       ?disabled="${readOnly}"
       ?compatibility="${compatibility}"
