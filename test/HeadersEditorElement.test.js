@@ -498,4 +498,26 @@ accept-encoding: gzip`;
       assert.isNotTrue(button.disabled);
     });
   })
+
+  describe('a11y', () => {
+    let element = /** @type HeadersEditorElement */(null);
+    beforeEach(async () => {
+      element = await basicFixture();
+    });
+
+    it('should have aria-label on copy button', () => {
+      const copyButton = element.shadowRoot.querySelector('.copy-button');
+      assert.isNotEmpty(copyButton.getAttribute('aria-label'))
+    });
+
+    it('should have aria-label on editor switch', () => {
+      const editorSwitch = element.shadowRoot.querySelector('.editor-switch');
+      assert.isNotEmpty(editorSwitch.getAttribute('aria-label'))
+    });
+
+    it('should have aria-label on add param button', () => {
+      const addButton = element.shadowRoot.querySelector('.add-param');
+      assert.isNotEmpty(addButton.getAttribute('aria-label'))
+    });
+  });
 });

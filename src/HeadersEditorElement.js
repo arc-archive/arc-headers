@@ -517,7 +517,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       class="copy-button"
       @click="${this[copyHandler]}"
       ?disabled="${!this.hasHeaders}"
-
+      aria-label="Copy headers"
     >Copy</anypoint-button>
     `;
   }
@@ -531,6 +531,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       .checked="${this.source}" 
       @change="${this[sourceModeHandler]}"
       class="editor-switch"
+      aria-label="Toggle editor type"
     >Text editor</anypoint-switch>
     `;
   }
@@ -617,8 +618,9 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
         class="add-param"
         ?compatibility="${compatibility}"
         ?disabled="${readOnly}"
+        aria-label="Add header"
       >
-        <arc-icon icon="addCircleOutline"></arc-icon> Add
+        <arc-icon icon="addCircleOutline" aria-hidden="true"></arc-icon> Add
       </anypoint-button>
     </div>
     `;
@@ -635,11 +637,11 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       data-index="${index}"
       @click="${this[removeHeaderHandler]}"
       title="Remove this parameter"
-      aria-label="Activate to remove this item"
+      aria-label="Remove header"
       ?disabled="${readOnly}"
       ?compatibility="${compatibility}"
     >
-      <arc-icon icon="removeCircleOutline"></arc-icon>
+      <arc-icon icon="removeCircleOutline" aria-hidden="true"></arc-icon>
     </anypoint-icon-button>
     `;
   }
@@ -657,7 +659,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       .checked="${item.enabled}"
       @checked-changed="${this[enabledHandler]}"
       title="Enable / disable header"
-      aria-label="Activate to toggle enabled state of this item"
+      aria-label="Toggle header"
       class="param-switch"
       ?disabled="${readOnly}"
       ?compatibility="${compatibility}"
