@@ -620,7 +620,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
         ?disabled="${readOnly}"
         aria-label="Add header"
       >
-        <arc-icon icon="addCircleOutline"></arc-icon> Add
+        <arc-icon icon="addCircleOutline" aria-hidden="true"></arc-icon> Add
       </anypoint-button>
     </div>
     `;
@@ -637,11 +637,11 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       data-index="${index}"
       @click="${this[removeHeaderHandler]}"
       title="Remove this parameter"
-      aria-label="Remove"
+      aria-label="Remove header"
       ?disabled="${readOnly}"
       ?compatibility="${compatibility}"
     >
-      <arc-icon icon="removeCircleOutline"></arc-icon>
+      <arc-icon icon="removeCircleOutline" aria-hidden="true"></arc-icon>
     </anypoint-icon-button>
     `;
   }
@@ -659,7 +659,7 @@ export class HeadersEditorElement extends EventsTargetMixin(LitElement) {
       .checked="${item.enabled}"
       @checked-changed="${this[enabledHandler]}"
       title="Enable / disable header"
-      aria-label="Toggle enabled/disabled"
+      aria-label="Toggle header"
       class="param-switch"
       ?disabled="${readOnly}"
       ?compatibility="${compatibility}"
