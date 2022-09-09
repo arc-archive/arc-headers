@@ -178,10 +178,6 @@ export class HeadersParser {
       if (!item.name && !item.value) {
         return;
       }
-      const { schema={} } = item;
-      if (!schema.required && !item.value) {
-        return;
-      }
       parts.push(HeadersParser.itemToString(item));
     });
     return parts.join('\n');
